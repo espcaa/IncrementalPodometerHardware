@@ -1,29 +1,31 @@
 # Incremental Podometer Hardware
 
-On this repo you'll find details about our journey to make a little pcb board which counts steps and keep you entertained !
-You can take a look at schematics in the /pcb directory or just keep reading this!
+In this repo, you'll find details about our journey to make a little PCB board that counts steps and keeps you entertained!  
+You can take a look at the schematics in the `/pcb` directory or just keep reading this!
 
-**If you want to look at the software of the Incremental Podometer look at [this repo](https://github.com/theMathR/incremental-podometer/tree/main)**
+**If you want to look at the software of the Incremental Podometer, check out [this repo](https://github.com/theMathR/incremental-podometer/tree/main)**
 
-# Its history
+# Its History
 
-So first, what is the Incremental Podometer ?
-It's a podometer ! (No wwwaaaaayyyyy) But. With. An. Incremental Game !!!!!!!
-You'll have stats about your physic activity but you'll remain entertained ! Amazing no ?
+So first, what is the Incremental Podometer?  
+It's a podometer! (No waaayyyyy)  
+But. With. An. Incremental. Game!!!!!!  
+You'll get stats about your physical activity, but you'll stay entertained! Amazing, right?
 
-So we started to brainstorm a bit and established a list of essential components :
-- A screen, needed for having a UI for the game
-- A micro controller (with circuitpython, I dont code in C)
-- Some buttons (Our first idea was 8 buttons)
-- An accelerometer (For counting steps)
+So we started to brainstorm a bit and came up with a list of essential components:
+- A screen (needed to have a UI for the game)
+- A microcontroller (with CircuitPython — I don't code in C)
+- Some buttons (our first idea was 8 buttons)
+- An accelerometer (for counting steps)
 
-So with that in mind, we started to look individually at these components:
-First for the microcontroller, we chosed a Pico W because it's cheap, easy to use and mainly because it has wireless capabilities
-Second, the screen. We planned to use [the same as the sprig]([url](https://www.adafruit.com/product/358)). But we quickly realised it will be not cheap enough so we finally opted for an [equivalent screen from a german seller.](https://www.az-delivery.de/fr/products/1-8-zoll-spi-tft-display?variant=6106727841819)
+With that in mind, we started looking individually at these components:  
+First, for the microcontroller, we chose a Pico W because it's cheap, easy to use, and mainly because it has wireless capabilities.  
+Second, the screen. We planned to use [the same one as the Sprig](https://www.adafruit.com/product/358). But we quickly realized it wasn't cheap enough, so we finally opted for an [equivalent screen from a German seller](https://www.az-delivery.de/fr/products/1-8-zoll-spi-tft-display?variant=6106727841819).
 
-Our main problem during this project _was the cost of the podometer_. Our first prototype was 30$/board. We planned to make 30 of them and with 450$ at this price we could only make 15 of them. :/ 
-We cut the costs by dont ordering the picos from JLPCB (6$ less via digikey !), using another screen (4,50$/screen) and soldering all these parts. I also regrouped all the parts we need assembled by the pcb maker on the same side because double sided assembly is SO EXPENSIVE !!!
-And we finally opted for an ADXL345 over an ADXL335 because it has I2C and is more power efficient (And 2$ less!)
+Our main problem during this project _was the cost of the podometer_. Our first prototype was $30 per board. We planned to make 30 of them, and with $450, at that price, we could only make 15. :/  
+We cut costs by not ordering the Picos from JLCPCB (saved $6 via DigiKey!), using a different screen ($4.50 per screen), and soldering all the parts ourselves. I also grouped all the parts we needed assembled by the PCB maker on the same side, because double-sided assembly is SO EXPENSIVE!!!  
+We finally opted for an ADXL345 over an ADXL335 because it has I2C, is more power-efficient, and costs $2 less!
+
 
 ## Components list
 
